@@ -2,6 +2,25 @@
 
 ;;; Create new shared session on cocode.io from your emacs
 
+;;; INSTALL:
+;;; - copy cocodeio.el into your emacs load path
+;;; - load cocodeio.el and add some shortcut from yout dotemacs 
+;;;
+;;; (require 'cocodeio)
+;;; ;;; add a "cocodeio session from buffer" shortcut `C-c c b'
+;;; (global-set-key [(control ?c) (?c) (?b)]
+;;;                 'cocodeio-create-session-from-buffer)
+;;;
+;;; ;;; add a "cocodeio session from region" shortcut `C-c c r'
+;;; global-set-key [(control ?c) (?c) (?r)]
+;;;                'cocodeio-create-session-from-region)
+;;;
+;;;
+;;; CONFIGURE:
+;;; - configure and save your credentials using customize-group
+;;;  
+;;; (customize-group cocodeio)
+
 (require 'json)
 
 (defcustom cocodeio-base-url "https://cocode.io"
